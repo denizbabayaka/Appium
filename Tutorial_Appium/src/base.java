@@ -10,8 +10,10 @@ import io.appium.java_client.remote.MobileCapabilityType;
 
 public class base {
 
-	public static void main(String[] args) throws MalformedURLException {
-		// TODO Auto-generated method stub
+	public static AndroidDriver<AndroidElement> capabilities() throws MalformedURLException
+    
+	{
+
 		
         //we place the apk file and this method will bring the path 
 		File appDir = new File("src");
@@ -28,7 +30,11 @@ public class base {
 		
 		//we pass the capability object to that method so our driver can send codes 
 		//to our device and we pass the url
-		AndroidDriver<AndroidElement> driver=new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),cap);
+		AndroidDriver<AndroidElement> driver=new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"),cap);
+		
+		return driver;
+		
+	}
 		
 	/*
 	    1-Basically what we did is we give "File" format to "ApiDemos-debug.apk" and establish 
@@ -49,4 +55,4 @@ public class base {
 
 	}
 
-}
+
