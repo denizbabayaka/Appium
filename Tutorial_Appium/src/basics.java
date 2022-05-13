@@ -27,10 +27,12 @@ public class basics extends base{
 		  driver.findElement(By.xpath("//android.widget.TextView[@text='Preference']")).click();
 		  driver.findElement(By.xpath("//android.widget.TextView[@text='3. Preference dependencies']")).click();
 		  driver.findElement(By.id("android:id/checkbox")).click();
-		  //if there is same tagname and no specific identifier we use index 
+		  //if there is same tagname and no specific identifier we use index we just write tag and index number 
 		  driver.findElementByXPath("(//android.widget.RelativeLayout)[2]").click();
 		  //driver.findElement(By.id("android:id/edit"));
 		  driver.findElementByClassName("android.widget.EditText").sendKeys("Deniz Babayaka");
+		  driver.findElementsByClassName("android.widget.Button").get(1).click();
+
 
 		  
 		  
